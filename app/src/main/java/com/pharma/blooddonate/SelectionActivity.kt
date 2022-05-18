@@ -24,14 +24,25 @@ class SelectionActivity : AppCompatActivity() {
 
         donerbtn.setOnClickListener {
             val i = Intent(this, RegisterActivity::class.java)
+            i.putExtra("type", "doner")
             startActivity(i)
         }
 
         receiverbtn.setOnClickListener {
             val i = Intent(this, RegisterActivity::class.java)
+            i.putExtra("type","reciever")
             startActivity(i)
         }
 
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if(firebaseAuth.currentUser != null){
+            val i = Intent(this, DashBoardActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }

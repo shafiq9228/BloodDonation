@@ -9,7 +9,7 @@
     android:weightSum="10"
     android:orientation="vertical"
     android:background="#F34235"
-    tools:context=".MainActivity">
+    tools:context=".SelectionActivity">
 
     <ImageView
         android:layout_width="100dp"

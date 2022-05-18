@@ -9,7 +9,7 @@
     android:background="@color/white"
     android:padding="20dp"
     android:orientation="vertical"
-    tools:context=".SignupActivity">
+    tools:context=".LogActivity">
 
 
     <TextView
