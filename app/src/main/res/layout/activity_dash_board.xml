@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="20dp"
     android:layout_height="match_parent"
     tools:context=".DashBoardActivity">
@@ -14,6 +15,16 @@
         android:layout_height="wrap_content"
         android:text="Add a post"
         android:id="@+id/addpost"
+        android:textColor="@color/white"
+        android:background="@drawable/redbtn"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View post"
+        android:layout_marginTop="20dp"
+        android:id="@+id/viewpost"
         android:textColor="@color/white"
         android:background="@drawable/redbtn"
         />

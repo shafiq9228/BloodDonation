@@ -9,11 +9,19 @@ import android.widget.Button
 class DashBoardActivity : AppCompatActivity() {
 
     lateinit var addpost: Button
+    lateinit var viewpost: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
 
         addpost = findViewById(R.id.addpost)
+        viewpost = findViewById(R.id.viewpost)
+
+        viewpost.setOnClickListener(View.OnClickListener {
+            val i = Intent(this, PostListActivity::class.java)
+
+            startActivity(i)
+        })
 
         addpost.setOnClickListener(View.OnClickListener {
             val i = Intent(this, PostActivity::class.java)

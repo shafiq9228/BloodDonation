@@ -2,12 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pharma.blooddonate">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera"  android:required="true" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -17,13 +20,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodDonation">
         <activity
+            android:name=".CommentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostListActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".CameraActivity"
             android:exported="false" />
         <activity
             android:name=".PostActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".DashBoardActivity"
             android:exported="false" />

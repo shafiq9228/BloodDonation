@@ -3,6 +3,7 @@ package com.pharma.blooddonate
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -13,6 +14,8 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -30,10 +33,14 @@ class PostActivity : AppCompatActivity() {
     lateinit var postbtn: Button
     lateinit var opncamera: LinearLayout
     lateinit var storageReference: StorageReference
-    lateinit var filepath: Uri
+    var filepath: Uri? = null
     lateinit var storage: FirebaseStorage
     lateinit var firebaseFirestore: FirebaseFirestore
     lateinit var pd: ProgressDialog
+    lateinit var firebaseAuth: FirebaseAuth
+
+    lateinit var title: String
+    lateinit var desc: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +53,8 @@ class PostActivity : AppCompatActivity() {
         pd.setCancelable(false)
 
         titleet = findViewById(R.id.titleet)
+
+
         descet = findViewById(R.id.descet)
 
         postbtn = findViewById(R.id.postbtn)
@@ -53,6 +62,7 @@ class PostActivity : AppCompatActivity() {
 
         storage = Firebase.storage
         firebaseFirestore = FirebaseFirestore.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
 
         opncamera = findViewById(R.id.opncamera)
         imgview = findViewById(R.id.imgview)
@@ -73,7 +83,24 @@ class PostActivity : AppCompatActivity() {
 
 
         postbtn.setOnClickListener(View.OnClickListener {
-            sendtostorage()
+
+            title = titleet.text.toString()
+            desc = descet.text.toString()
+            if (title.isEmpty() || desc.isEmpty()){
+                Toast.makeText(applicationContext, "Please Fill Title and Description", Toast.LENGTH_SHORT).show()
+            }else{
+                if (filepath != null){
+
+                   sendtostorage()
+
+                }
+                else {
+
+                    addtodb(title, desc, "")
+
+                }
+            }
+
 
         })
 
@@ -91,7 +118,7 @@ class PostActivity : AppCompatActivity() {
             )
 
 
-        var uploadTask = ref.putFile(filepath)
+        var uploadTask = ref.putFile(filepath!!)
 
 
         val urlTask = uploadTask.continueWithTask { task ->
@@ -107,24 +134,8 @@ class PostActivity : AppCompatActivity() {
                 val downloadUri = task.result
                 Toast.makeText(applicationContext,""+ downloadUri, Toast.LENGTH_SHORT).show()
 
-                val post = hashMapOf(
 
-
-                    "url" to downloadUri.toString()
-                )
-
-            firebaseFirestore.collection("posts")
-                .add(post)
-                .addOnCompleteListener(OnCompleteListener { task ->
-                    if (task.isSuccessful){
-                        pd.dismiss()
-                        Toast.makeText(applicationContext,"saved to firebase", Toast.LENGTH_SHORT).show()
-                    }
-                    else
-                    {
-                        Toast.makeText(applicationContext,"failed "+task.exception, Toast.LENGTH_SHORT).show()
-                    }
-                })
+                addtodb(title, desc, downloadUri.toString())
 
             } else {
                 pd.dismiss()
@@ -136,16 +147,61 @@ class PostActivity : AppCompatActivity() {
     }
 
 
+   fun addtodb(title: String, desc: String, url: String){
+
+       val alphabet: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
+
+       val randomString: String = List(20) { alphabet.random() }.joinToString("")
+
+
+       val post = hashMapOf(
+
+           "uuid" to firebaseAuth.currentUser?.uid,
+           "title" to title,
+           "desc" to desc,
+           "url" to url,
+           "createAt" to FieldValue.serverTimestamp(),
+           "name" to  firebaseAuth.currentUser?.displayName,
+           "postid" to randomString
+
+       )
+
+       firebaseFirestore.collection("posts")
+           .add(post)
+           .addOnCompleteListener(OnCompleteListener { task ->
+               if (task.isSuccessful){
+                   pd.dismiss()
+                   Toast.makeText(applicationContext,"saved to firebase", Toast.LENGTH_SHORT).show()
+                   titleet.setText("")
+                   descet.setText("")
+                   filepath = null
+                  imgview.setImageResource(R.drawable.ic_launcher_background)
+
+
+               }
+               else
+               {
+                   Toast.makeText(applicationContext,"failed "+task.exception, Toast.LENGTH_SHORT).show()
+               }
+           })
+
+   }
+
+
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        filepath =  data?.data!!
-        val bitmap = MediaStore.Images.Media
-            .getBitmap(
-                contentResolver,
-                filepath
-            )
-        imgview.setImageBitmap(bitmap)
+        if (data?.data != null){
+            filepath =  data?.data!!
+            val bitmap = MediaStore.Images.Media
+                .getBitmap(
+                    contentResolver,
+                    filepath
+                )
+            imgview.setImageBitmap(bitmap)
+        }
+
 
     }
 }

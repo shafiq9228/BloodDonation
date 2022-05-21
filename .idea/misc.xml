@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.1205" />
         <entry key="app/src/main/res/drawable/redbtn.xml" value="0.1105" />
+        <entry key="app/src/main/res/drawable/roundbtn.xml" value="0.1205" />
         <entry key="app/src/main/res/drawable/strokebtn.xml" value="0.1105" />
         <entry key="app/src/main/res/drawable/whitebtn.xml" value="0.1105" />
         <entry key="app/src/main/res/drawable/whitecurve.xml" value="0.1205" />
         <entry key="app/src/main/res/layout/activity_camera.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/activity_comments.xml" value="0.20045572916666662" />
         <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_form.xml" value="0.17635294596354165" />
         <entry key="app/src/main/res/layout/activity_log.xml" value="0.22291666666666668" />
@@ -15,9 +18,12 @@
         <entry key="app/src/main/res/layout/activity_login2.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2057601928710938" />
         <entry key="app/src/main/res/layout/activity_post.xml" value="0.20012054443359378" />
+        <entry key="app/src/main/res/layout/activity_post_list.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_selection.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.14157511393229166" />
+        <entry key="app/src/main/res/layout/commentsitem.xml" value="0.22818400065104166" />
+        <entry key="app/src/main/res/layout/postitem.xml" value="0.19928080240885415" />
       </map>
     </option>
   </component>

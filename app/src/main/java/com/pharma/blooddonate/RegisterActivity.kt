@@ -2,6 +2,7 @@ package com.pharma.blooddonate
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,8 +11,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
+
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -72,12 +75,23 @@ class RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
 
 
-                    senddetailstodb()
-                    Toast.makeText(
-                        this,
-                        "Signed Up Successfully",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    val user = FirebaseAuth.getInstance().currentUser
+
+                    val profileUpdates = UserProfileChangeRequest.Builder()
+                        .setDisplayName(nameet.text.toString())
+                        .build()
+
+                    user!!.updateProfile(profileUpdates)
+                        .addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                senddetailstodb()
+                            }
+                            else{
+                              Toast.makeText(applicationContext, "Failed "+task.exception, Toast.LENGTH_SHORT).show()
+                            }
+                        }
+
+
                 } else {
                     pd.dismiss()
                     Toast.makeText(this, "" + task.exception, Toast.LENGTH_SHORT)
@@ -97,8 +111,6 @@ class RegisterActivity : AppCompatActivity() {
 
 
         )
-
-
 
         db.collection("users")
             .document(""+firebaseAuth.currentUser?.uid)
