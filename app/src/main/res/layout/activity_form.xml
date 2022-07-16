@@ -27,7 +27,8 @@
         android:layout_height="wrap_content"
         android:textColorHint="#696969"
         app:hintTextColor="#696969"
-        app:boxStrokeColor="#F34235"
+
+        app:boxStrokeColor="#BB86FC"
         android:hint="Enter Blood Group">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:textColorHint="#696969"
         app:hintTextColor="#696969"
-        app:boxStrokeColor="#F34235"
+        app:boxStrokeColor="#BB86FC"
         android:hint="Enter Mobile">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -67,7 +68,7 @@
         android:layout_height="wrap_content"
         android:textColorHint="#696969"
         app:hintTextColor="#696969"
-        app:boxStrokeColor="#F34235"
+        app:boxStrokeColor="#BB86FC"
         android:hint="Enter Address">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -87,7 +88,7 @@
         android:layout_height="wrap_content"
         android:textColorHint="#696969"
         app:hintTextColor="#696969"
-        app:boxStrokeColor="#F34235"
+        app:boxStrokeColor="#BB86FC"
         android:hint="Enter Age">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -119,7 +120,7 @@
             android:layout_width="0dp"
             android:layout_weight="5"
             android:checked="true"
-            android:buttonTint="#F34235"
+            android:buttonTint="#BB86FC"
             android:id="@+id/malecb"
             android:layout_height="wrap_content"
             android:text="Male"/>
@@ -128,7 +129,7 @@
             android:layout_width="0dp"
             android:layout_weight="5"
             android:id="@+id/femailcb"
-            android:buttonTint="#F34235"
+            android:buttonTint="#BB86FC"
             android:layout_height="wrap_content"
             android:text="Femail"/>
     </LinearLayout>

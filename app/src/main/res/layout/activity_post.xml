@@ -44,7 +44,7 @@
                 android:layout_width="100dp"
                 android:id="@+id/imgview"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_launcher_background"/>
+                android:src="@drawable/img_1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,11 +96,10 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_marginTop="12dp"
-            android:layout_height="match_parent"
+            android:layout_height="140dp"
             android:textAlignment="textStart"
             android:textColorHint="#696969"
             app:hintTextColor="#696969"
-
             app:boxStrokeColor="#F34235"
             android:hint="Enter Description">
 
@@ -114,6 +113,19 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
+
+
+        <Spinner
+            android:id="@+id/spin"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+        </Spinner>
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -121,7 +133,6 @@
         android:layout_weight="2"
         android:gravity="bottom"
         android:layout_height="0dp">
-
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"

@@ -29,34 +29,19 @@ class PostListActivity : AppCompatActivity() {
 
         postlist.layoutManager = LinearLayoutManager(this)
 
-        getposts()
 
+      val model = PostModel("", "", "", "", "");
+        arrayList.add(model)
+
+        val model2 = PostModel("", "", "", "", "");
+        arrayList.add(model2)
+
+        val model3 = PostModel("", "", "", "", "");
+        arrayList.add(model3)
+
+        postlist.adapter = PostAdapter(this, arrayList)
 
     }
-    fun getposts(){
-        firebaseFirestore.collection("posts")
-            .get()
-            .addOnCompleteListener(OnCompleteListener {task ->
-                if (task.isSuccessful){
-                    for (ds: DocumentSnapshot in task.result){
 
-                        val posts = PostModel(ds.getString("name").toString(), ds.getString("title").toString(),
-                        ds.getString("desc").toString(), ds.getString("postid").toString(),
-                        ds.getString("url").toString())
-
-                       arrayList.add(posts)
-
-                    }
-
-                    val myadapter = PostAdapter(this, arrayList)
-                    postlist.adapter = myadapter
-
-                }
-                else{
-                    Toast.makeText(applicationContext, "failed "+task.exception, Toast.LENGTH_SHORT).show()
-                }
-
-            })
-    }
 
 }

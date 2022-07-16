@@ -12,77 +12,47 @@
     tools:context=".LogActivity">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome Back"
-        android:textSize="24dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
-
-
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_marginTop="12dp"
-        android:layout_height="wrap_content"
-        android:textColorHint="#696969"
-        app:hintTextColor="#696969"
-        app:boxStrokeColor="#F34235"
-        android:hint="Enter Email">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000"
-            android:id="@+id/logemailet"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_marginTop="12dp"
-        android:layout_height="wrap_content"
-        android:textColorHint="#696969"
-        app:hintTextColor="#696969"
-        app:boxStrokeColor="#F34235"
-        android:hint="Enter Password">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:inputType="textPassword"
-            android:textColor="#000000"
-            android:id="@+id/logpasset"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/signinbtn"
-        android:layout_marginTop="20dp"
-        android:text="Login"
-        android:textColor="@color/white"
-        android:background="@drawable/redbtn"/>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="20sp"
+        android:src="@drawable/img_1"/>
 
     <TextView
         android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
-        android:textColor="#696969"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:id="@+id/gotosignup"
-        android:layout_marginTop="20dp"
-        android:text="Don't have a account? Sign up"/>
+        android:textSize="16sp"
+        android:textColor="#6200EE"
+        android:layout_marginBottom="12dp"
+        android:text="Blood App"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curve"
+        android:id="@+id/mygooglesignbtn"
+        android:padding="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:gravity="center">
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/googleimg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#BB86FC"
+            android:textSize="16dp"
+            android:textFontWeight="500"
+            android:text="Continue with Google"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -68,54 +68,52 @@ class FormActivity : AppCompatActivity() {
 
 
         submitbtn.setOnClickListener(View.OnClickListener {
-            senddonerdetails()
+            val i = Intent(this, Drawer3Activity::class.java)
+            startActivity(i)
+            finishAffinity()
         })
 
 
     }
 
 
-    fun senddonerdetails(){
-        pd.show()
-        val details = hashMapOf<String, Any>(
-            "bloodgroup" to bloodet.text.toString(),
-            "address" to addresset.text.toString(),
-            "gender" to gender,
-            "age" to ageet.text.toString(),
-            "mobile" to mobileet.text.toString(),
-            "uid" to firebaseauth.currentUser?.uid.toString()
-
-
-        )
-
-
-        db.collection("doner")
-            .document(""+ firebaseauth.currentUser?.uid.toString())
-            .set(details)
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (task.isSuccessful){
-                    Toast.makeText(applicationContext, "Form Submitted", Toast.LENGTH_SHORT).show()
-                    db.collection("users")
-                        .document(firebaseauth.currentUser?.uid.toString())
-                        .update("submitted", true)
-                        .addOnCompleteListener(OnCompleteListener {task1 ->
-                            if (task1.isSuccessful){
-                                pd.dismiss()
-                                val i = Intent(this, DashBoardActivity::class.java)
-                                startActivity(i)
-                                finishAffinity()
-                            }
-                            else{
-                                Toast.makeText(applicationContext, "Failed "+task1.exception, Toast.LENGTH_SHORT).show()
-                                pd.dismiss()
-                            }
-
-                        })
-                }
-                else{
-                    pd.dismiss()
-                    Toast.makeText(applicationContext, "Failed "+task.exception, Toast.LENGTH_SHORT).show()
-                }
-            })
-    }
+//    fun senddonerdetails(){
+//        pd.show()
+//        val details = hashMapOf<String, Any>(
+//            "bloodgroup" to bloodet.text.toString(),
+//            "address" to addresset.text.toString(),
+//            "gender" to gender,
+//            "age" to ageet.text.toString(),
+//            "mobile" to mobileet.text.toString(),
+//            "uid" to firebaseauth.currentUser?.uid.toString()
+//        )
+//
+//
+//        db.collection("doner")
+//            .document(""+ firebaseauth.currentUser?.uid.toString())
+//            .set(details)
+//            .addOnCompleteListener(OnCompleteListener { task ->
+//                if (task.isSuccessful){
+//                    Toast.makeText(applicationContext, "Form Submitted", Toast.LENGTH_SHORT).show()
+//                    db.collection("users")
+//                        .document(firebaseauth.currentUser?.uid.toString())
+//                        .update("submitted", true)
+//                        .addOnCompleteListener(OnCompleteListener {task1 ->
+//                            if (task1.isSuccessful){
+//                                pd.dismiss()
+//
+//                            }
+//                            else{
+//                                Toast.makeText(applicationContext, "Failed "+task1.exception, Toast.LENGTH_SHORT).show()
+//                                pd.dismiss()
+//                            }
+//
+//                        })
+//                }
+//                else{
+//                    pd.dismiss()
+//                    Toast.makeText(applicationContext, "Failed "+task.exception, Toast.LENGTH_SHORT).show()
+//                }
+//            })
+//    }
 }
