@@ -20,40 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodDonation">
         <activity
-            android:name=".UserActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChatActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DetailPage"
-            android:exported="false" />
-        <activity
-            android:name=".Drawer3Activity"
-            android:exported="true"
-            android:label="@string/title_activity_drawer3"
-            android:theme="@style/Theme.BloodDonation.NoActionBar" />
-        <activity
-            android:name=".CommentsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PostListActivity"
-            android:exported="true" />
-        <activity
-            android:name=".CameraActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PostActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".DashBoardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FormActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SelectionActivity"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -61,11 +29,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
+            android:name=".MyFragment"
+            android:exported="false" />
         <activity
-            android:name=".LogActivity"
-            android:exported="true" />
+            android:name=".google"
+            android:exported="false" />
+
     </application>
 
 </manifest>
