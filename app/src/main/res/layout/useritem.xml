@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="341dp"
+        android:layout_height="163dp"
+        android:layout_margin="8dp"
+        android:padding="5dp"
+        android:background="@drawable/curve6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="114dp"
+                android:layout_height="146dp"
+                android:src="@drawable/person1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Joy"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserratbold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Hyderabad"
+                    android:textSize="12dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/montserratbold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="86dp"
+                        android:layout_height="31dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="2dp"
+                        android:drawableStart="@drawable/ic_outline_message_24"
+                        android:background="@drawable/chatbtn"
+                        android:text="Chat"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/montserratmedium"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="86dp"
+                        android:layout_height="31dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="2dp"
+                        android:drawableStart="@drawable/ic_baseline_call_24"
+                        android:background="@drawable/callbtn"
+                        android:text="Call"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/montserratmedium"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

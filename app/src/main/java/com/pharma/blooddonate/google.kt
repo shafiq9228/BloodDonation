@@ -19,12 +19,8 @@ import com.google.firebase.auth.GoogleAuthProvider
 
 class google : AppCompatActivity() {
     var googlebtn: LinearLayout? = null
-    lateinit var signInRequest: BeginSignInRequest
-    private val REQ_ONE_TAP = 2  // Can be any integer unique to the Activity
-    private var showOneTapUI = true
-    lateinit var onetapclient: SignInClient
-    lateinit var googleAuthCredential: GoogleAuthCredential
     lateinit var auth: FirebaseAuth
+     var type: Int = 0
 
     private var mGoogleSignInClient: GoogleSignInClient? = null
 
@@ -32,6 +28,7 @@ class google : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_google)
 
+        type = intent.getIntExtra("type",0);
 
         auth = FirebaseAuth.getInstance()
 
@@ -44,17 +41,6 @@ class google : AppCompatActivity() {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
 
-        signInRequest = BeginSignInRequest.builder()
-            .setGoogleIdTokenRequestOptions(
-                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-                    .setSupported(true)
-                    // Your server's client ID, not your Android client ID.
-                    .setServerClientId("437841300061-a0ihdot99k62eh5ej8kd05ommdvd0drr.apps.googleusercontent.com")
-                    // Only show accounts previously used to sign in.
-                    .setFilterByAuthorizedAccounts(true)
-                    .build())
-
-            .build()
         googlebtn = findViewById(R.id.googlebtn)
         googlebtn!!.setOnClickListener(View.OnClickListener {
 
@@ -99,9 +85,17 @@ class google : AppCompatActivity() {
 
                     Toast.makeText(applicationContext, "Success", Toast.LENGTH_SHORT).show()
                     val user = auth.currentUser
-                    val i = Intent(this@google, MyFragment::class.java)
-                    startActivity(i)
-                    finishAffinity()
+
+                    if (type == 0){
+                        val i = Intent(this@google, RegisterActivity::class.java)
+                        startActivity(i)
+                        finishAffinity()
+                    }else{
+                        val i = Intent(this@google, MyFragment::class.java)
+                        startActivity(i)
+                        finishAffinity()
+                    }
+
 
                 } else {
                     Toast.makeText(applicationContext, "Success", Toast.LENGTH_SHORT).show()
@@ -118,9 +112,6 @@ class google : AppCompatActivity() {
     }
     // [END signin]
 
-    private fun updateUI(user: FirebaseUser?) {
-
-    }
 
     companion object {
         private const val TAG = "GoogleActivity"

@@ -36,21 +36,35 @@
 
                     <ImageView
                         android:layout_width="20dp"
+                        android:id="@+id/logout1"
                         android:layout_height="20dp"
-                        android:src="@drawable/ic_outline_chat_24"/>
+                        android:src="@drawable/ic_baseline_logout_24"/>
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="15dp"
-                android:id="@+id/allpostlist"
-                tools:listitem="@layout/postlist"
-                tools:itemCount="3"/>
+                android:text="Doner's List"
+                android:textSize="16dp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserratbold"/>
+
+            <include layout="@layout/useritem"/>
+
+            <include layout="@layout/useritem"/>
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginHorizontal="15dp"-->
+<!--                android:id="@+id/allpostlist"-->
+<!--                tools:listitem="@layout/postlist"-->
+<!--                tools:itemCount="3"/>-->
 
         </LinearLayout>
 

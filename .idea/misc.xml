@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.1706965128580729" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.22291666666666668" />
         <entry key="app/src/main/res/layout/activity_detail_page.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/activity_doner_fragment.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_drawer2.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_form.xml" value="0.18845469156901037" />
         <entry key="app/src/main/res/layout/activity_google.xml" value="0.23697916666666666" />
@@ -30,29 +31,38 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_login2.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2057601928710938" />
-        <entry key="app/src/main/res/layout/activity_my_fragment.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/activity_my_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_post.xml" value="0.20012054443359378" />
         <entry key="app/src/main/res/layout/activity_post_list.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1072882317501408" />
         <entry key="app/src/main/res/layout/activity_register_screen.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_selection.xml" value="0.24359283447265628" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.14157511393229166" />
+        <entry key="app/src/main/res/layout/activity_upload.xml" value="0.14730173746744793" />
         <entry key="app/src/main/res/layout/activity_user.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/app_bar_drawer2.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/commentsitem.xml" value="0.22818400065104166" />
         <entry key="app/src/main/res/layout/content_drawer2.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/donerhome.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/donerlocation.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/donersearch.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.23697916666666666" />
-        <entry key="app/src/main/res/layout/homepage.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/homepage.xml" value="0.1743555704752604" />
+        <entry key="app/src/main/res/layout/locationpage.xml" value="0.13949381510416664" />
         <entry key="app/src/main/res/layout/mypostitem.xml" value="0.2375330607096355" />
         <entry key="app/src/main/res/layout/nav_header_drawer2.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/notificationpage.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/notifications.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/postitem.xml" value="0.2554926554361979" />
+        <entry key="app/src/main/res/layout/postlist.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/profilepage.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/receiveitem.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/searchpage.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/senderitem.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/useritem.xml" value="0.27998148600260414" />
+        <entry key="app/src/main/res/layout/userslist.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/menu/activity_drawer3_drawer.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/menu/drawer3.xml" value="0.23697916666666666" />
       </map>
