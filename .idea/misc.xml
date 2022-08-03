@@ -34,8 +34,9 @@
         <entry key="app/src/main/res/layout/activity_my_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_post.xml" value="0.20012054443359378" />
         <entry key="app/src/main/res/layout/activity_post_list.xml" value="0.23697916666666666" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.1072882317501408" />
-        <entry key="app/src/main/res/layout/activity_register_screen.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/activity_receiver_registration.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.18664245605468754" />
+        <entry key="app/src/main/res/layout/activity_register_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_selection.xml" value="0.24359283447265628" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.14157511393229166" />
         <entry key="app/src/main/res/layout/activity_upload.xml" value="0.14730173746744793" />
@@ -43,8 +44,8 @@
         <entry key="app/src/main/res/layout/app_bar_drawer2.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/commentsitem.xml" value="0.22818400065104166" />
         <entry key="app/src/main/res/layout/content_drawer2.xml" value="0.2484375" />
-        <entry key="app/src/main/res/layout/donerhome.xml" value="0.2359375" />
-        <entry key="app/src/main/res/layout/donerlocation.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/donerhome.xml" value="0.1707122802734375" />
+        <entry key="app/src/main/res/layout/donerlocation.xml" value="0.24705047607421876" />
         <entry key="app/src/main/res/layout/donersearch.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.23697916666666666" />

@@ -91,7 +91,7 @@ class google : AppCompatActivity() {
                         startActivity(i)
                         finishAffinity()
                     }else{
-                        val i = Intent(this@google, MyFragment::class.java)
+                        val i = Intent(this@google, ReceiverRegistration::class.java)
                         startActivity(i)
                         finishAffinity()
                     }

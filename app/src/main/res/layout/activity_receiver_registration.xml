@@ -89,23 +89,22 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="#CCED7575"
+                android:text="Male"
                 android:id="@+id/malecb"
                 android:textColor="@color/white"
-                android:text="Male"
+                android:fontFamily="@font/montserratbold"
+                android:buttonTint="#CCED7575"
                 android:checked="true"/>
-
 
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Female"
                 android:id="@+id/femalecb"
                 android:textColor="@color/white"
-                android:text="Female"
                 android:buttonTint="#CCED7575"
                 android:checked="false"/>
-
 
 
         </LinearLayout>
