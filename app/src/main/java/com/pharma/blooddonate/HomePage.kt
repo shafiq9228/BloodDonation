@@ -56,14 +56,14 @@ class HomePage : Fragment() {
             })
         })
 
-//        allpostlist = view.findViewById(R.id.allpostlist)
-//        allpostlist?.setLayoutManager(
-//            LinearLayoutManager(
-//                context,
-//                LinearLayoutManager.VERTICAL,
-//                false
-//            )
-//        )
+        allpostlist = view.findViewById(R.id.allpostlist)
+        allpostlist?.setLayoutManager(
+            LinearLayoutManager(
+                context,
+                LinearLayoutManager.VERTICAL,
+                false
+            )
+        )
         mypostlist = ArrayList<PostListModel>()
         val listModel = PostListModel("Donating Blood", "John doe Fondation", "A+", "25/07/2022")
         mypostlist!!.add(listModel)
@@ -77,7 +77,8 @@ class HomePage : Fragment() {
         mypostlist!!.add(listModel5)
         val listModel6 = PostListModel("Donating Blood", "John doe Fondation", "A+", "25/07/2022")
         mypostlist!!.add(listModel6)
-       // allpostlist?.setAdapter(PostListAdapter(mypostlist!!))
+
+        allpostlist!!.adapter = activity?.let { PostListAdapter(mypostlist!!, it) }
         return view
     }
 }

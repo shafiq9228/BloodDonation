@@ -118,15 +118,17 @@
 
             <ImageView
                 android:layout_width="20dp"
+                android:id="@+id/chatimg"
                 android:layout_height="20dp"
                 android:layout_marginHorizontal="10dp"
                 android:src="@drawable/ic_outline_mode_comment_24"/>
 
             <ImageView
                 android:layout_width="20dp"
+                android:id="@+id/locbtn"
                 android:layout_height="20dp"
                 android:layout_marginHorizontal="10dp"
-                android:src="@drawable/ic_round_send_24"/>
+                android:src="@drawable/ic_outline_location_on_24"/>
 
         </LinearLayout>
 

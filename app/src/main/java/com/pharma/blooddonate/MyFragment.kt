@@ -40,6 +40,8 @@ class MyFragment : AppCompatActivity() {
             ft!!.replace(R.id.maindisplay, fragment!!)
             ft!!.commit()
         })
+
+
         btn2?.setOnClickListener(View.OnClickListener {
             fragment = SearchPage()
             fm = supportFragmentManager

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -36,135 +37,47 @@
     </LinearLayout>
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/curve3"
-        android:layout_marginHorizontal="24dp"
-        android:padding="14dp"
-        android:drawableEnd="@drawable/ic_baseline_search_24"
-        android:textSize="14dp"
-        android:fontFamily="@font/montserratmedium"
-        android:textColorHint="#D0000000"
-        android:textColor="#000000"
-        android:hint="Search Reciver"/>
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:weightSum="10"
         android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:gravity="center"
+        android:layout_height="50dp">
 
-        <include layout="@layout/userslist"
-            android:layout_margin="12dp"
-            android:layout_width="114dp"
-            android:layout_height="146dp" />
+        <EditText
+            android:layout_width="200dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent"
+           android:layout_marginHorizontal="8dp"
+            android:background="@drawable/curve3"
+            android:padding="14dp"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserratmedium"
+            android:textColorHint="#D0000000"
+            android:textColor="#000000"
+            android:hint="Search Reciver"/>
 
-        <include layout="@layout/userslist"
-            android:layout_margin="12dp"
-            android:layout_width="114dp"
-            android:layout_height="146dp" />
 
-        <include layout="@layout/userslist"
-            android:layout_margin="12dp"
-            android:layout_width="114dp"
-            android:layout_height="146dp" />
-
+        <ImageView
+            android:layout_width="0dp"
+            android:background="@drawable/curve1"
+            android:src="@drawable/ic_baseline_filter_list_24"
+            android:layout_weight="3.2"
+            android:id="@+id/filterbtn"
+            android:layout_height="40dp"
+            app:tint="#CCED7575" />
     </LinearLayout>
 
 
-
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:id="@+id/donerrv"
+        tools:listitem="@layout/postlist"/>
 
-        <LinearLayout
-            android:layout_width="341dp"
-            android:layout_height="163dp"
-            android:padding="5dp"
-            android:background="@drawable/curve6">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:layout_width="114dp"
-                    android:layout_height="146dp"
-                    android:src="@drawable/person1"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="20dp"
-                        android:text="Joy"
-                        android:textColor="#000000"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/montserratbold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:text="Hyderabad"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/montserratbold"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="bottom"
-                        android:orientation="horizontal">
-
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:layout_width="86dp"
-                            android:layout_height="31dp"
-                            android:paddingLeft="10dp"
-                            android:layout_marginHorizontal="10dp"
-                            android:layout_marginVertical="2dp"
-                            android:drawableStart="@drawable/ic_outline_message_24"
-                            android:background="@drawable/chatbtn"
-                            android:text="Chat"
-                            android:textAllCaps="false"
-                            android:textColor="#000000"
-                            android:textSize="12dp"
-                            android:fontFamily="@font/montserratmedium"/>
-
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:layout_width="86dp"
-                            android:layout_height="31dp"
-                            android:paddingLeft="10dp"
-                            android:layout_marginHorizontal="10dp"
-                            android:layout_marginVertical="2dp"
-                            android:drawableStart="@drawable/ic_baseline_call_24"
-                            android:background="@drawable/callbtn"
-                            android:text="Call"
-                            android:textAllCaps="false"
-                            android:textColor="#000000"
-                            android:textSize="12dp"
-                            android:fontFamily="@font/montserratmedium"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
 
 </LinearLayout>

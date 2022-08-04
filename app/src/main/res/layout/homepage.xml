@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#CCED7575"
+    android:padding="12dp"
     android:orientation="vertical">
 
     <FrameLayout
@@ -54,17 +55,15 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/montserratbold"/>
 
-            <include layout="@layout/useritem"/>
 
-            <include layout="@layout/useritem"/>
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginHorizontal="15dp"-->
-<!--                android:id="@+id/allpostlist"-->
-<!--                tools:listitem="@layout/postlist"-->
-<!--                tools:itemCount="3"/>-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:id="@+id/allpostlist"
+                tools:listitem="@layout/postlist"
+                tools:itemCount="3"/>
 
         </LinearLayout>
 

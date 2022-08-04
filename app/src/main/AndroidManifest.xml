@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pharma.blooddonate">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
@@ -19,6 +20,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodDonation">
+        <activity
+            android:name=".MapAct"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD5NGQD5jDUGUfDzT5jZ_UriS1M_ZOKCVw" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
         <activity
             android:name=".ReceiverRegistration"
             android:exported="false" />
@@ -47,5 +57,6 @@
             android:name=".google"
             android:exported="false" />
     </application>
+
 
 </manifest>

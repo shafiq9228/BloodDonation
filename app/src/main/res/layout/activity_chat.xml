@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="#ECEFEB"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:background="#128c7e"
+        android:layout_marginBottom="12dp"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:id="@+id/chatback"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:tint="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="40dp"
+                android:layout_height="match_parent">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratmedium"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:id="@+id/chatname"
+                    android:textColor="@color/white"
+                    android:text="Name"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/receiveitem"/>
+    <include layout="@layout/senderitem"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        tools:itemCount="4"
+        android:id="@+id/chatrv"
+        android:padding="12dp"
+        android:layout_weight="10"
+        android:layout_height="0dp"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:id="@+id/messageet"
+                android:hint="Enter Message"
+                android:padding="12dp"
+                android:background="@drawable/chatcurve"
+                android:textColorHint="#696969"
+                android:inputType="textMultiLine"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_baseline_send_24"
+                android:id="@+id/sendbtn"
+                android:layout_gravity="right"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:padding="12dp"
+                android:background="@drawable/roundbtn"
+                android:layout_height="36dp"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

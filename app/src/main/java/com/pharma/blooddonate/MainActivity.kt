@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
         donerbtn = findViewById(R.id.donerbtn)
         rvbtn = findViewById(R.id.rvbtn)
         donerbtn!!.setOnClickListener(View.OnClickListener {
